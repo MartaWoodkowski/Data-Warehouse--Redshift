@@ -6,15 +6,16 @@ I've built an ETL pipeline that extracts their data from S3, stages it in Redshi
 
 ## Datasets that reside in S3:
 * Song data:<b> `s3://udacity-dend/song_data` </b>
-* Log data:<b> `s3://udacity-dend/log_data` </b><br>
-(Log data json path:<b> `s3://udacity-dend/log_json_path.json` </b>)
+* Log data:<b> `s3://udacity-dend/log_data` </b><br><br>
+
+* Log data json path:<b> `s3://udacity-dend/log_json_path.json` </b>
 
 ### Song Dataset
 The first dataset is a subset of real data from the Million Song Dataset. Each file is in JSON format and contains metadata about a song and the artist of that song. The files are partitioned by the first three letters of each song's track ID. For example, here are filepaths to two files in this dataset:<br>
 * song_data/A/B/C/TRABCEI128F424C983.json <br>
 * song_data/A/A/B/TRAABJL12903CDCF1A.json <br>
 <br>
-And below is an example of what a single song file, TRAABJL12903CDCF1A.json, looks like: <br><br>
+And below is an example of what a single song file, `TRAABJL12903CDCF1A.json`:<br><br>
 `{"num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null, "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0}`
 
 ### Log Dataset
@@ -25,5 +26,6 @@ The log files in the dataset you'll be working with are partitioned by year and 
 * log_data/2018/11/2018-11-13-events.json<br>
 <br>
 And below is an example of what the data in a log file, `2018-11-12-events.json`:
+
 ![image](images/log-data.png)
 
